@@ -61,11 +61,17 @@ header.primary nav ul li{
 }
 
 header.primary nav ul li a{
-    color: #D92B04;
+    color: #F2B705;
     text-decoration: none;
     background-color: #000;
     padding:8px 16px;
     border-radius:20px;
     border: ridge;
-    border-color:#D92B04;
+    border-color:#F2B705;
+}
+
+body header.primary img{
+    float: left;
+    max-width: 100px;
+    max-height: auto;
 }
