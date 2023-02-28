@@ -27,7 +27,7 @@ body nav ul li a{
     text-decoration: none;
 }
 
-img{
+body h1.primary img{
     border-radius: 200px;
     max-width: 4rem;
     height: auto;
