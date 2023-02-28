@@ -1,0 +1,35 @@
+/* Colors 
+#6E2639; red
+#29141A; maroon
+#737373; grey
+#A3A3A3;
+#B8B8B8;
+*/
+
+body{
+    background-color: #B8B8B8;
+    margin:0;
+}
+h1.primary {
+    background-color: #6E2639;
+    padding: 2.8rem;
+    margin:0;
+    text-align: center;
+    color: #737373;
+}
+
+body nav ul li{
+list-style-type: square;
+}
+
+body nav ul li a{
+    color: #29141A;
+    text-decoration: none;
+}
+
+img{
+    border-radius: 200px;
+    max-width: 4rem;
+    height: auto;
+    float: left;
+}
