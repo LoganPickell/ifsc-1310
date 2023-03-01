@@ -16,6 +16,19 @@ html {
     box-sizing: inherit;
   }
 
+/*  --------------- Utility Classes -----------------  */
+
+.container{
+    width:80vw; 
+max-width:960px;
+margin:40px auto;
+}
+
+/*  --------------- Responsive Images -----------------  */
+img{
+    max-width:100%;
+}
+
   /*  --------------- Global Styles -----------------  */
 
 body {
@@ -32,6 +45,12 @@ header.primary{
 }
 header.primary h1{
 font-size: 2.4rem;
+}
+
+header.primary img{
+    float: left;
+    max-width:125px;
+    max-height: auto;
 }
 
 header.primary h1 a{
@@ -63,15 +82,69 @@ header.primary nav ul li{
 header.primary nav ul li a{
     color: #F2B705;
     text-decoration: none;
-    background-color: #000;
+    background-color:rgba(0,0,0,.4);
     padding:8px 16px;
     border-radius:20px;
     border: ridge;
     border-color:#F2B705;
+    transition: 0.5s;
 }
 
-body header.primary img{
-    float: left;
-    max-width: 100px;
-    max-height: auto;
+header.primary nav ul li a:hover, 
+header.primary nav ul li a:active{
+    background-color: rgba(0,0,0,0.8)
+}
+
+#intro{
+
+}
+
+#intro h2{
+color: #F25C05;
+border-bottom:1px solid #000000;
+}
+
+#content{
+    display:flex;
+    justify-content: space-between;
+    flex-direction:row;
+    gap:20px;
+}
+
+#content article.post {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    transition: 0.5s;
+  }
+  
+  #content article.post:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  article.post figure{
+    margin:0;
+  }
+
+
+
+
+
+
+
+
+  /*  --------------- Media Queries -----------------  */
+@media screen and (max-width:600px){
+    header.primary nav ul{
+        flex-direction: column;
+        max-width:250px;
+        margin: auto;
+    }
+    header.primary nav a{
+        display: block;
+    }
+    header.primary nav li{
+        margin-bottom:10px;
+    }
 }
