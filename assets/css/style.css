@@ -30,5 +30,5 @@ body h1.primary img{
     border-radius: 200px;
     max-width: 4rem;
     height: auto;
-    float: left;
+    display:flex;
 }
