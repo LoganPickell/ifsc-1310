@@ -24,9 +24,91 @@ max-width:960px;
 margin:40px auto;
 }
 
+.img-right{
+  float:right;
+  border:1px solid #000000;
+  padding:2px;
+  margin:10px 0 10px 20px;
+}
+
+.img-left{
+  float:left;
+  border:1px solid #000000;
+  padding:2px;
+  margin:10px 20px 10px 0px;
+}
+
+.img-center{
+  display:block;
+  border:1px solid #000000;
+  padding:2px;
+  margin:20px auto;
+}
+
 /*  --------------- Responsive Images -----------------  */
 img{
     max-width:100%;
+}
+
+/*  --------------- Tables ------------------------  */
+
+table {
+  width:100%;
+  border:1px solid #000000;
+  border-collapse:collapse;
+}
+
+table caption{
+  font-weight:bold;
+  margin:20px;
+}
+
+table tr:nth-child(2n){
+  background-color:rgba(0,0,0,0.1)
+}
+
+table tr:hover{
+  background-color:rgba(0,0,0,0.2)
+}
+table th{
+background-color:#F2B705;
+padding: 10px;
+}
+
+table td{
+   border:1px solid #000000;
+   padding: 5px;
+   text-align:right;
+  }
+  table td:first-of-type{
+    text-align:left;
+  }
+
+/*  --------------- Lists ------------------------  */
+
+ol{
+  list-style-type:"\1F44D";
+}
+
+li{
+}
+
+ul ul{
+  list-style-type:square;
+}
+
+dl{}
+
+dt{
+  font-weight:bold;
+  margin-top:20px;
+}
+dd{
+margin:0;
+}
+
+dd+dt{
+  margin-top:20px;
 }
 
   /*  --------------- Global Styles -----------------  */
@@ -110,6 +192,8 @@ border-bottom:1px solid #000000;
     justify-content: space-between;
     flex-direction:row;
     gap:20px;
+    border-bottom: 1px solid #000000;
+    padding-bottom:2.6rem;
 }
 
 #content article.post {
@@ -148,6 +232,12 @@ padding:2px;
     text-decoration:none;
     }
 
+#practice h2{
+color: #F25C05;
+border-bottom: 1px solid #000000;
+}
+
+
     aside[role="complementary"]{
         background-color:#F28705;
         color:#ffffff;
@@ -183,12 +273,6 @@ padding:2px;
         font-size: 0.9rem;
       }
       
-
-
-
-
-
-
   /*  --------------- Media Queries -----------------  */
 @media screen and (max-width:600px){
     header.primary nav ul{
