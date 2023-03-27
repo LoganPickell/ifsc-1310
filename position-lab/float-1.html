@@ -32,33 +32,25 @@
       margin-left: auto;
       text-shadow: 2px 2px #000;
     }
-    #navy {
-      background-color: #001f3f;
+
+    .tile{
       width:370px;
       height:125px;
-      float:left;
-      margin:20px 0 0 20px;
+      float: left;
+      margin-left:20px;
+      margin-bottom:20px;
+    }
+    #navy {
+      background-color: #001f3f;
     }
     #teal {
       background-color: #39CCCC;
-      width:370px;
-      height:125px;
-      float:right;
-      margin: 20px 20px 20px 0px;
     }
     #blue {
       background-color: #0074D9;
-      width:370px;
-      height:125px;
-      float:left;
-      margin:20px 0 20px 20px;
     }
     #aqua {
       background-color: #7FDBFF;
-      width:370px;
-      height:125px;
-      float:right;
-      margin: 0 20px 20px 0;
     }
     #footer {
       background-color: #666;
@@ -75,10 +67,10 @@
 <body>
   <h1>Float 1</h1>
   <section id="wrapper">
-    <div id="navy">Navy</div>
-    <div id="teal">Teal</div>
-    <div id="blue">Blue</div>
-    <div id="aqua">Aqua</div>
+    <div id="navy" class="tile">Navy</div>
+    <div id="teal" class="tile">Teal</div>
+    <div id="blue" class="tile">Blue</div>
+    <div id="aqua" class="tile">Aqua</div>
     <div id="footer">Footer</div>
   </section>
 </body>
