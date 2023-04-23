@@ -30,18 +30,33 @@ img{
 
 /*  --------------- Tables ------------------------  */
 
-table {}
-table caption{}
-table tr:nth-child(2n){}
-table tr:hover{}
-table th{}
-table td{}
-table td:first-of-type{}
-
-/*  --------------- Lists ------------------------  */
-
-ul{
+table {
+    width:65%;
+    border:1px solid #000000;
+    border-collapse:collapse;
+    margin:40px auto;
   }
+  
+  table caption{
+    font-weight:bold;
+    margin:20px;
+    text-shadow: -2px 1px #2F070F;
+  }
+  
+  table tr:nth-child(2n){
+    background-color:rgba(0,0,0,0.5)
+  }
+  
+  table th{
+  background-color:#000;
+  padding: 10px;
+  }
+  
+  table td{
+     border:1px solid #000000;
+     padding: 5px 15px;
+     text-align:center;
+    }
 
  
 /*  --------------- Global Styles -----------------  */
@@ -54,6 +69,15 @@ ul{
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
+
+figcaption{
+    font-size:smaller;
+    color:gray;
+    font-weight:bold;
+    text-transform: uppercase;
+}
+
+  /*  --------------- Header -----------------  */
 header.primary{
     padding: 125px 125px 250px 125px;
     text-align:center;
@@ -72,11 +96,16 @@ header.primary::before{
     right:0;
 }
 
+/*
+My logo introduces side scrolling at narrow width screen dimensions. Need to look into fixing this.
+It also doesn't look centered.
+*/
+
 header.primary h1 a{
 color:white;
 background-image: url(/dragon/assets/img/SpaceX-Logo.png);
 display:block;
-width:460px;
+width:450px;
 height:70px;
 margin:0 auto;
 text-indent:100%;
@@ -88,7 +117,7 @@ position:relative;
 header.primary h2{
     position:relative;
     font-size:x-large;
-    text-shadow: 2px 2px #2F070F;
+    text-shadow: -2px 1px #2F070F;
     color:#005288;
     text-align:center;
 }
@@ -108,14 +137,199 @@ header.primary nav ul li{
 header.primary nav ul li a{
     border:ridge;
     color:#005288;
-    text-shadow: 2px 2px #000;
+    text-shadow: 2px 1px #000;
     text-decoration:none;
-    background-color:rgba(0,0,0,.2);
-    border-color:#005288;
-    border-radius:20px;
-     padding:4px 12px;
+    background-color:rgba(0,0,0,.6);
+    border-color:#000;
+    border-radius:5px;
+    padding:4px 12px;
 }
 header.primary nav ul li a:hover, 
 header.primary nav ul li a:active{
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0,0,0,1)
+}
+
+
+/*  --------------- Content -----------------  */
+
+#content{
+padding:0px 0px 0px 0px;
+}
+
+#content h2{
+    color: #2F070F;
+    text-shadow: 2px 1px #005288;
+    border-bottom:1px solid #2F070F;
+    padding:25px 0px 25px 0px;
+    text-align:center;
+}
+
+#content h3{
+    color: black;
+    border-bottom:1px solid #2F070F;
+    padding:0px 0px 0px 0px;
+}
+
+#articles{
+display:flex;
+justify-content:space-between;
+flex-direction:row;
+flex-wrap:wrap;
+padding: 0px 0px 50px 0;
+}
+
+#articles h2{
+flex: 0 0 100%;
+text-align:center;
+font-weight:bolder;
+color:#000;
+text-shadow: 2px 1px #005288;
+}
+
+#articles article.post{
+    width: 30%;
+    padding:10px;
+    border:10px solid #2F070F;
+    border-radius:10px;
+    background-color: #005288;
+}
+
+#articles article.post h2,
+#articles article.post h4{
+    border-bottom:1px solid #2F070F;
+    text-align:center;
+}
+
+#articles .post img{
+border-radius: 10px;
+}
+
+#articles ul{
+    padding:0px 20px;
+}
+
+#articles li{
+    padding: 20px 0px;
+    border-bottom:1px solid #2F070F;
+}
+
+#pictures img{
+    max-width:98%;
+}
+#pictures ul{
+list-style-type: none;
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+#colophon {
+    background-color: black;
+  }
+
+#colophon h6 {
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
+    font-size:medium;
+  }
+
+
+
+
+
+/*  --------------- FAQ (shoutout to Dave Alger https://codepen.io/run-time/pen/VwWJbG) -----------------  */
+
+  .faq-header{
+    color: #2F070F;
+    text-shadow: 2px 1px #005288;
+    padding:0px 0px 25px 0px;
+    text-align:center;
+  }
+  
+  .faq-content {
+    margin: 0 auto;
+  }
+  
+  .faq-question {
+    padding: 20px 0px;
+    border-bottom: 1px solid #2F070F;
+  }
+  
+  .panel-title {
+    font-size: 20px;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 10px 10px 0 48px;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .panel-content {
+    font-size: 20px;
+    padding: 0px 14px;
+    margin: 0 40px;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    position: relative;
+    opacity: 0;
+    -webkit-transition: .4s ease;
+    -moz-transition: .4s ease;
+    -o-transition: .4s ease;
+    transition: .4s ease;
+  }
+  
+  .panel:checked ~ .panel-content{
+    height: auto;
+    opacity: 1;
+    padding: 14px;
+  }
+  
+  .plus {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 4px;
+    z-index: 5;
+    font-size: 42px;
+    line-height: 100%;
+    -webkit-user-select: none;    
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-transition: .2s ease;
+    -moz-transition: .2s ease;
+    -o-transition: .2s ease;
+    transition: .2s ease;
+  }
+  
+  .panel:checked ~ .plus {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .panel {
+    display: none;
+  }
+
+
+
+  /*  --------------- Media Queries -----------------  */
+  @media screen and (max-width:960px){
+    #articles{
+        display:flex;
+        justify-content:space-between;
+        flex-direction:column;
+        padding: 0px 0px 50px 0;
+        }
+
+        #articles article.post{
+            width: 100%;
+            margin: 25px 0px;
+        }
 }
